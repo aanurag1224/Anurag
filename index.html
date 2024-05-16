@@ -6,56 +6,137 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
 </head>
 <body>
-    <div class="container">
-        <div class="navbar">
-            <nav>
+
+    <div class="wrapper">
+
+        <div class="container">
+
+            <!-- <nav class="navbar">
                 <ul>
-                  <li><a href="#">HOME</a></li>
-                  <li><a href="#">ABOUT GU</a></li>
-                  <li><a href="#">PLACEMENT</a></li>
-                  <li><a href="#">SCHOOLS</a></li>
-                  <li><a href="#">PROGRAMS</a></li>
-                  <li><a href="#">ADMISSIONS</a></li>
-                  <li><a href="#">ACADEMICS</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT GU</a></li>
+                    <li><a href="#">PLACEMENT</a></li>
+                    <li><a href="#">SCHOOLS</a></li>
+                    <li><a href="#">PROGRAMS</a></li>
+                    <li><a href="#">ADMISSIONS</a></li>
+                    <li><a href="#">ACADEMICS</a></li>
                   <li><a href="#">MEDIA</a></li>
                   <li><a href="#">TESTIMONIALS</a></li>
                   <li><a href="#">CAREERS</a></li>
                   <li><a href="#">CONTACT US</a></li>
                 </ul>
-              </nav>
-        </div>
+            </nav> -->
+
         <header>
+
             <div class="top-left">
                 <img src="photos/logo.png" alt="">
             </div>
+
             <div class="top-right">
-                <ul>
-                    <li><a href="#" class="hover-links"><i class="fa fa-user" aria-hidden="true"></i> Student Login</a></li>
-                    <li><a href="#" class="hover-links "><i class="fa fa-user" aria-hidden="true"></i> GUEE 2018 login</a></li>
-                    <li><a href="#" class="hover-links"><i class="fa fa-bars"></i></a></li>
-                </ul>
+                    <a href="#" class="hover-links">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        Student Login
+                    </a>
+                    <a href="#" class="hover-links ">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        GUEE 2018 login
+                    </a>
+                    <a href="#" class="hover-links" id="start-menu-button">
+                        <i class="fa fa-bars"></i>
+                    </a>
             </div>
+
         </header>
+        
+        
         <video autoplay muted loop>
             <source  src="video/banner.mp4" type="video/mp4">
         </video>
+        
         <footer>
-            <div class="red">
-                <div class="f1">T-Series Stageworks Center of Excellence</div>
+            <div class="red footer-div">
+                    T-Series Stageworks Center of Excellence
             </div>
-            <div class="blue">
-                <div class="f2">
+            <div class="blue footer-div">
                     Galgotias University Entrance Exam-2024
-                </div>
             </div>
-            <div class="yellow">
-                <div class="f3">
+            <div class="yellow footer-div">
                     National Academic Depository
-                </div>
             </div>
         </footer>
+        
+        
+        
+        <nav class="navbar">
+
+            <div class="search-bar">
+                <input type="text" name="search" id="search" placeholder="Search">
+                <div id="end-menu-button">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+
+            <a href="#" class="sidebar-link" data-target="home-link">Home</a>
+
+            <a href="#" class="sidebar-link" data-target="about-link">About</a>
+
+            <a href="#" class="sidebar-link" data-target="placement-link">Placement</a>
+
+            <a href="#" class="sidebar-link" data-target="schools-link">Schools</a>
+
+            <a href="#" class="sidebar-link" data-target="programs-link">Programs</a>
+
+            <a href="#" class="sidebar-link" data-target="admission-link">Admission</a>
+
+            <a href="#" class="sidebar-link" data-target="academics-link">Academics</a>
+
+            <a href="#" class="sidebar-link" data-target="media-link">Media</a>
+
+            <a href="#" class="sidebar-link" data-target="testimonials-link">Testimonials</a>
+
+            <a href="#" class="sidebar-link" data-target="careers-link">Careers</a>
+            
+            <a href="#" class="sidebar-link" data-target="contact-us-link">Contact Us</a>       
+        </nav>
+
+        <div class="navbar other-sidebar hidden-sidebars media-link">
+            <span class="back">back</span>
+            <a href="#">Menu Wala Div</a>
+            <a href="#">Anurag</a>
+            <a href="#">Aditya</a>
+            <a href="#">Ko</a>
+            <a href="#">Party</a>
+            <a href="#">Dega</a>
+        </div>
+
+        <div class="navbar other-sidebar hidden-sidebars academics-link">
+            <span class="back">back</span>
+            <a href="#">Andi</a>
+            <a href="#">mandi</a>
+            <a href="#">sandi</a>
+            <a href="#">jo</a>
+            <a href="#">naa</a>
+        </div>
+
+        <div class="navbar other-sidebar hidden-sidebars admission-link">
+            <span class="back">&lt; back</span>
+            <a href="#">shaka</a>
+            <a href="#">laka</a>
+            <a href="#">boom</a>
+            <a href="#">boom</a>
+            <a href="#">bc</a>
+        </div>
+        
     </div>
+        <!-- Wrapper Ended -->
+    </div>
+
+    <script src="script.js"></script>
+
+
 </body>
 </html>

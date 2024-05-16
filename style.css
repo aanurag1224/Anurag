@@ -4,84 +4,113 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
+:root{
+    --light-gray: rgba(98,98,98,1);
+    --alpha-dim: 0.65;
+    --alpha-hover: 1;
+}
+
 body{
     overflow-x: hidden;
 }
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
 
 .container{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: relative;
+    background-color: black;
 }
+
+/* Background Video */
 .container video{
     position: absolute;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    
+    object-position: bottom center;
+    filter: opacity(0.75);
 }
-header{
+
+/* Header */
+.container header{
     position: absolute;
     width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
-    right: 0;
+    height: 12vh;
+    inset: 0 0 auto 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     z-index: 5;
 }
-.top-left img{
-    width: 300px;
+.container header .top-left img{
+    width: 55%;
 }
   
-.top-right ul{
-    display: flex;
-    list-style-type: none;
+.container header .top-right a{
+    color: rgba(255, 255, 255, 0.75);
+    /* font-size: 115%; */
+    font-weight: 200;
+    border: 1px solid var(--light-gray);
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 50px;
+    opacity: 0.85;
+}
+#start-menu-button{
+    border-radius: 50%;
+    padding: 10px 12px;
+}
+.container header .top-right a:hover{
+    color: white;
+    border-color: white;
+    box-shadow: 0 0 5px white inset;
+}
 
-
-}
-.top-right ul li{
-    display: inline-block;
-    padding: 0.5rem 0.1rem;
-}
-.top-right{
-    margin-top:10px;
-}
 
 footer{
     position: absolute;
     width: 100%;
-    height: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    min-height: 10%;
+    inset: auto 0 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1%;
     z-index: 5;
 }
 .red{
-    background-color: red;
+    --base-color: 255, 0, 0;
+    background-color: rgba(var(--base-color), var(--alpha-dim));
 }
 .blue{
-    background-color: skyblue;
+    --base-color: 0, 255, 0;
+    background-color: rgba(var(--base-color), var(--alpha-dim));
 }
 .yellow{
-    background-color: yellow;
+    --base-color: 255, 255, 0;
+    background-color: rgba(var(--base-color), var(--alpha-dim));
 }
-.f1{
+.container footer .footer-div{
     padding: 20px 20px;
-    color: white;
+    color: black;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 25%;
+    max-height: 5%;
+    white-space: nowrap;
+    overflow: hidden;
 }
-.f2{
-    padding: 20px 20px;
-    color: white;
+.container footer .footer-div:hover{
+    background-color: rgba(var(--base-color), var(--alpha-hover));
+    cursor: pointer;
 }
-.f3{
-    padding: 20px 20px;
-    color: white;
-}
+/*
 .hover-links{
     border: 0.5px solid #577592;
     border-radius: 20px;
@@ -107,6 +136,67 @@ footer{
     background-color: black;
     color: white;
 }
+*/
 
+.container .navbar{
+    height: 100%;
+    width: 25vw;
+    position: fixed;
+    inset: 0 0 0 auto;
+    z-index: 10;
+    background-color: black;
+    padding: 0 1%;
+    /* box-shadow: -8px 0 5px 8px rgb(98, 98, 98); */
+}
+.container .navbar .search-bar{
+    color: white;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.container .navbar .search-bar input{
+    width: 75%;
+    border: 1px solid var(--light-gray);
+    background-color: transparent;
+    color: white;
+    outline: none;
+    padding: 2% 5%;
+    border-radius: 25px;
+}
+#end-menu-button{
+    border-radius: 50%;
+    padding: 10px 12px;
+    border: 1px solid var(--light-gray);
+    opacity: 0.5;
+}
+#end-menu-button:hover{
+    border-color: white;
+    cursor: pointer;
+    opacity: 1;
+}
+.container .navbar a{
+    text-decoration: none;
+    color: var(--light-gray);
+    display: block;
+    padding: 3%;
+    border-top: 1px solid white;
+}
+.container .navbar a:last-child{
+    border-bottom: 1px solid white;
+}
+.container .navbar a:hover{
+    color: white;
+}
 
-
+.navbar.hidden-sidebars{
+    transform: translateX(100%);
+    z-index: 50;
+    transition: transform .75s;
+}
+.navbar.hidden-sidebars span{
+    display: inline-block;
+    color: white;
+    padding: 3%;
+    cursor: pointer;
+    margin: 5% 0;
+}
