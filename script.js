@@ -1,22 +1,18 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     var media = document.getElementById('media');
-//     var mediaLink = document.getElementById('media-link');
-//     var back = document.getElementById('back');
-
-//     media.addEventListener('click', function(event) {
-//         event.preventDefault(); // Prevent the default anchor behavior
-//         mediaLink.style.transform = 'translateX(0)';
-//     });
-
-//     back.addEventListener('click', function(event) {
-//         event.preventDefault(); // Prevent the default anchor behavior
-//         mediaLink.style.transform = 'translateX(100%)';
-//     });
-
-// });
 
 document.addEventListener('DOMContentLoaded', function() {
     var back = document.querySelectorAll('.back');
+    var openMenu = document.getElementById('start-menu-button');
+    var closeMenu = document.getElementById('end-menu-button');
+    var menuSidebar = document.getElementById('menu-sidebar');
+
+    openMenu.addEventListener('click', function(){
+        menuSidebar.style.transform = 'translateX(0)';
+        menuSidebar.style.opacity = '1';
+    });
+    closeMenu.addEventListener('click', function(){
+        menuSidebar.style.opacity = '0';
+        menuSidebar.style.transform = 'translateX(100%)';
+    });
 
     back.forEach(function(backElement) {
         backElement.addEventListener('click', function(event) {
